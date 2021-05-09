@@ -2,6 +2,7 @@ package com.sumit.gcp.datastore.sample.entities;
 
 import com.google.cloud.spring.data.datastore.core.mapping.Entity;
 import com.google.gson.annotations.SerializedName;
+
 import lombok.Getter;
 import lombok.Setter;
 
