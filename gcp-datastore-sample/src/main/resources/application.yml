@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    gcp:
+      datastore:
+        emulator:
+          enabled: true
+          port: 8081
+        enabled: true
+        namespace: sumit-sample-namespace
+        project-id: sumit-practice-project
