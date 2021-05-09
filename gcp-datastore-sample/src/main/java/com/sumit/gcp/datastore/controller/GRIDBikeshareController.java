@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sumit.gcp.datastore.sample.entities.FreeBikeStatus;
+import com.sumit.gcp.datastore.sample.entities.GBFS4;
 import com.sumit.gcp.datastore.service.handlers.DataRetrivalServiceHandler;
 import com.sumit.gcp.datastore.service.handlers.UpsertServiceHandler;
 
@@ -41,4 +42,14 @@ public class GRIDBikeshareController {
     public ResponseEntity<?> freeBikeStatus(@RequestBody FreeBikeStatus freeBikeStatusRequest) {
         return new ResponseEntity(upsertServiceHandler.createFreeBikeStatus(freeBikeStatusRequest), CREATED);
     }
+  @GetMapping(value = "/gbfs4")
+  @ResponseBody
+  public ResponseEntity<?> gbfs4() {
+    return new ResponseEntity(dataRetrivalServiceHandler.retriveAllFreeBikestatus(), OK);
+  }
+  @PostMapping(value = "/freebikestatus", consumes = "application/json", produces = "application/json")
+  @ResponseBody
+  public ResponseEntity<?> gbfs4(@RequestBody GBFS4 gbfs4) {
+    return new ResponseEntity(upsertServiceHandler.createFreeBikeStatus(gbfs4), CREATED);
+  }
 }
