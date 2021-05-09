@@ -1,9 +1,9 @@
 package com.sumit.gcp.datastore.sample.entities;
 
+import java.util.List;
+
 import lombok.Getter;
 import lombok.Setter;
-
-import java.util.List;
 
 @Setter
 @Getter
