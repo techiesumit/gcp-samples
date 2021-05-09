@@ -47,7 +47,7 @@ public class GRIDBikeshareController {
   public ResponseEntity<?> gbfs4() {
     return new ResponseEntity(dataRetrivalServiceHandler.retriveAllFreeBikestatus(), OK);
   }
-  @PostMapping(value = "/freebikestatus", consumes = "application/json", produces = "application/json")
+  @PostMapping(value = "/gbfs4", consumes = "application/json", produces = "application/json")
   @ResponseBody
   public ResponseEntity<?> gbfs4(@RequestBody GBFS4 gbfs4) {
     return new ResponseEntity(upsertServiceHandler.createFreeBikeStatus(gbfs4), CREATED);
